@@ -1,0 +1,310 @@
+
+<div id="sidetoggle">
+  <div>
+    <div class="sidefilter">
+      <form class="toc-filter">
+        <span class="glyphicon glyphicon-filter filter-icon"></span>
+        <span class="glyphicon glyphicon-remove clear-icon" id="toc_filter_clear"></span>
+        <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+      </form>
+    </div>
+    <div class="sidetoc">
+      <div class="toc" id="toc">
+          
+          <ul class="nav level1">
+                <li>
+                    <span class="expand-stub"></span>
+                    <a href="FigNet.html" name="" title="FigNet">FigNet</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="FigNet.ApplicationType.html" name="" title="ApplicationType">ApplicationType</a>
+                          </li>
+                          <li>
+                              <a href="FigNet.Configuration.html" name="" title="Configuration">Configuration</a>
+                          </li>
+                          <li>
+                              <a href="FigNet.Module.html" name="" title="Module">Module</a>
+                          </li>
+                          <li>
+                              <a href="FigNet.PeerConfig.html" name="" title="PeerConfig">PeerConfig</a>
+                          </li>
+                          <li>
+                              <a href="FigNet.ServerConfig.html" name="" title="ServerConfig">ServerConfig</a>
+                          </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="expand-stub"></span>
+                    <a href="FigNet.Core.html" name="" title="FigNet.Core">FigNet.Core</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="FigNet.Core.DeliveryMethod.html" name="" title="DeliveryMethod">DeliveryMethod</a>
+                          </li>
+                          <li>
+                              <a href="FigNet.Core.Extensions.html" name="" title="Extensions">Extensions</a>
+                          </li>
+                          <li>
+                              <a href="FigNet.Core.FigNetConstants.html" name="" title="FigNetConstants">FigNetConstants</a>
+                          </li>
+                          <li>
+                              <a href="FigNet.Core.FN.html" name="" title="FN">FN</a>
+                          </li>
+                          <li>
+                              <a href="FigNet.Core.HandlerCollection.html" name="" title="HandlerCollection">HandlerCollection</a>
+                          </li>
+                          <li>
+                              <a href="FigNet.Core.IBegin.html" name="" title="IBegin">IBegin</a>
+                          </li>
+                          <li>
+                              <a href="FigNet.Core.IClient.html" name="" title="IClient">IClient</a>
+                          </li>
+                          <li>
+                              <a href="FigNet.Core.IClientSocket.html" name="" title="IClientSocket">IClientSocket</a>
+                          </li>
+                          <li>
+                              <a href="FigNet.Core.IEnd.html" name="" title="IEnd">IEnd</a>
+                          </li>
+                          <li>
+                              <a href="FigNet.Core.IHandler.html" name="" title="IHandler">IHandler</a>
+                          </li>
+                          <li>
+                              <a href="FigNet.Core.IHandlerList.html" name="" title="IHandlerList">IHandlerList</a>
+                          </li>
+                          <li>
+                              <a href="FigNet.Core.ILogger.html" name="" title="ILogger">ILogger</a>
+                          </li>
+                          <li>
+                              <a href="FigNet.Core.IMessage.html" name="" title="IMessage">IMessage</a>
+                          </li>
+                          <li>
+                              <a href="FigNet.Core.IModule.html" name="" title="IModule">IModule</a>
+                          </li>
+                          <li>
+                              <a href="FigNet.Core.INetStatistics.html" name="" title="INetStatistics">INetStatistics</a>
+                          </li>
+                          <li>
+                              <a href="FigNet.Core.INetworkRequest.html" name="" title="INetworkRequest">INetworkRequest</a>
+                          </li>
+                          <li>
+                              <a href="FigNet.Core.INetworkService.html" name="" title="INetworkService">INetworkService</a>
+                          </li>
+                          <li>
+                              <a href="FigNet.Core.IPeer.html" name="" title="IPeer">IPeer</a>
+                          </li>
+                          <li>
+                              <a href="FigNet.Core.IPeerCollection-1.html" name="" title="IPeerCollection&lt;TPeer&gt;">IPeerCollection&lt;TPeer&gt;</a>
+                          </li>
+                          <li>
+                              <a href="FigNet.Core.IPeerFactory.html" name="" title="IPeerFactory">IPeerFactory</a>
+                          </li>
+                          <li>
+                              <a href="FigNet.Core.ISerializer.html" name="" title="ISerializer">ISerializer</a>
+                          </li>
+                          <li>
+                              <a href="FigNet.Core.IServer.html" name="" title="IServer">IServer</a>
+                          </li>
+                          <li>
+                              <a href="FigNet.Core.IServerSocket.html" name="" title="IServerSocket">IServerSocket</a>
+                          </li>
+                          <li>
+                              <a href="FigNet.Core.ISocketFactory.html" name="" title="ISocketFactory">ISocketFactory</a>
+                          </li>
+                          <li>
+                              <a href="FigNet.Core.ITickable.html" name="" title="ITickable">ITickable</a>
+                          </li>
+                          <li>
+                              <a href="FigNet.Core.PeerBehaviour-1.html" name="" title="PeerBehaviour&lt;T&gt;">PeerBehaviour&lt;T&gt;</a>
+                          </li>
+                          <li>
+                              <a href="FigNet.Core.PeerCollection.html" name="" title="PeerCollection">PeerCollection</a>
+                          </li>
+                          <li>
+                              <a href="FigNet.Core.PeerStatus.html" name="" title="PeerStatus">PeerStatus</a>
+                          </li>
+                          <li>
+                              <a href="FigNet.Core.PeerType.html" name="" title="PeerType">PeerType</a>
+                          </li>
+                          <li>
+                              <a href="FigNet.Core.Providers.html" name="" title="Providers">Providers</a>
+                          </li>
+                          <li>
+                              <a href="FigNet.Core.ServiceLocator.html" name="" title="ServiceLocator">ServiceLocator</a>
+                          </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="expand-stub"></span>
+                    <a href="FIgNetClient.html" name="" title="FIgNetClient">FIgNetClient</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="FIgNetClient.ClientApplication.html" name="" title="ClientApplication">ClientApplication</a>
+                          </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="expand-stub"></span>
+                    <a href="FigNetProviders.html" name="" title="FigNetProviders">FigNetProviders</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="FigNetProviders.DefaultLogger.html" name="" title="DefaultLogger">DefaultLogger</a>
+                          </li>
+                          <li>
+                              <a href="FigNetProviders.Operation.html" name="" title="Operation">Operation</a>
+                          </li>
+                          <li>
+                              <a href="FigNetProviders.PeerFactory.html" name="" title="PeerFactory">PeerFactory</a>
+                          </li>
+                          <li>
+                              <a href="FigNetProviders.SocketFactory.html" name="" title="SocketFactory">SocketFactory</a>
+                          </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="expand-stub"></span>
+                    <a href="FigNetProviders.ENetLib.html" name="" title="FigNetProviders.ENetLib">FigNetProviders.ENetLib</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="FigNetProviders.ENetLib.ClientSocketENet.html" name="" title="ClientSocketENet">ClientSocketENet</a>
+                          </li>
+                          <li>
+                              <a href="FigNetProviders.ENetLib.PeerENet.html" name="" title="PeerENet">PeerENet</a>
+                          </li>
+                          <li>
+                              <a href="FigNetProviders.ENetLib.ServerSocketEnet.html" name="" title="ServerSocketEnet">ServerSocketEnet</a>
+                          </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="expand-stub"></span>
+                    <a href="FigNetProviders.LiteNetLib.html" name="" title="FigNetProviders.LiteNetLib">FigNetProviders.LiteNetLib</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="FigNetProviders.LiteNetLib.ClientSocketLiteNetLib.html" name="" title="ClientSocketLiteNetLib">ClientSocketLiteNetLib</a>
+                          </li>
+                          <li>
+                              <a href="FigNetProviders.LiteNetLib.PeerLiteNetLib.html" name="" title="PeerLiteNetLib">PeerLiteNetLib</a>
+                          </li>
+                          <li>
+                              <a href="FigNetProviders.LiteNetLib.ServerSocketLiteNetLib.html" name="" title="ServerSocketLiteNetLib">ServerSocketLiteNetLib</a>
+                          </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="expand-stub"></span>
+                    <a href="FigNetProviders.Messages.Handlers.html" name="" title="FigNetProviders.Messages.Handlers">FigNetProviders.Messages.Handlers</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="FigNetProviders.Messages.Handlers.RegisterIdentityHandler.html" name="" title="RegisterIdentityHandler">RegisterIdentityHandler</a>
+                          </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="expand-stub"></span>
+                    <a href="FigNetProviders.Messages.Operations.html" name="" title="FigNetProviders.Messages.Operations">FigNetProviders.Messages.Operations</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="FigNetProviders.Messages.Operations.RegisterIdentity.html" name="" title="RegisterIdentity">RegisterIdentity</a>
+                          </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="expand-stub"></span>
+                    <a href="FigNetProviders.Serializer.html" name="" title="FigNetProviders.Serializer">FigNetProviders.Serializer</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="FigNetProviders.Serializer.MessagePack_Serializer.html" name="" title="MessagePack_Serializer">MessagePack_Serializer</a>
+                          </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="expand-stub"></span>
+                    <a href="FigNetProviders.SimpleTcpLib.html" name="" title="FigNetProviders.SimpleTcpLib">FigNetProviders.SimpleTcpLib</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="FigNetProviders.SimpleTcpLib.ClientSocketTcp.html" name="" title="ClientSocketTcp">ClientSocketTcp</a>
+                          </li>
+                          <li>
+                              <a href="FigNetProviders.SimpleTcpLib.PeerTcp.html" name="" title="PeerTcp">PeerTcp</a>
+                          </li>
+                          <li>
+                              <a href="FigNetProviders.SimpleTcpLib.ServerSocketTcp.html" name="" title="ServerSocketTcp">ServerSocketTcp</a>
+                          </li>
+                          <li>
+                              <a href="FigNetProviders.SimpleTcpLib.ServerSocketTcp.TcpSession.html" name="" title="ServerSocketTcp.TcpSession">ServerSocketTcp.TcpSession</a>
+                          </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="expand-stub"></span>
+                    <a href="FigNetProviders.WebSocket.html" name="" title="FigNetProviders.WebSocket">FigNetProviders.WebSocket</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="FigNetProviders.WebSocket.ClientSocketWS.html" name="" title="ClientSocketWS">ClientSocketWS</a>
+                          </li>
+                          <li>
+                              <a href="FigNetProviders.WebSocket.PeerWS.html" name="" title="PeerWS">PeerWS</a>
+                          </li>
+                          <li>
+                              <a href="FigNetProviders.WebSocket.ServerSocketWS.html" name="" title="ServerSocketWS">ServerSocketWS</a>
+                          </li>
+                          <li>
+                              <a href="FigNetProviders.WebSocket.ServerSocketWS.SessionWS.html" name="" title="ServerSocketWS.SessionWS">ServerSocketWS.SessionWS</a>
+                          </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="expand-stub"></span>
+                    <a href="FigNetServer.html" name="" title="FigNetServer">FigNetServer</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="FigNetServer.ServerApplication.html" name="" title="ServerApplication">ServerApplication</a>
+                          </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="expand-stub"></span>
+                    <a href="FigNetServer.Modules.html" name="" title="FigNetServer.Modules">FigNetServer.Modules</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="FigNetServer.Modules.BuiltInModule.html" name="" title="BuiltInModule">BuiltInModule</a>
+                          </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="expand-stub"></span>
+                    <a href="MessagePack.Formatters.FigNetProviders.html" name="" title="MessagePack.Formatters.FigNetProviders">MessagePack.Formatters.FigNetProviders</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="MessagePack.Formatters.FigNetProviders.OperationFormatter.html" name="" title="OperationFormatter">OperationFormatter</a>
+                          </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="expand-stub"></span>
+                    <a href="MessagePack.Resolvers.html" name="" title="MessagePack.Resolvers">MessagePack.Resolvers</a>
+                    
+                    <ul class="nav level2">
+                          <li>
+                              <a href="MessagePack.Resolvers.GeneratedResolver.html" name="" title="GeneratedResolver">GeneratedResolver</a>
+                          </li>
+                    </ul>
+                </li>
+          </ul>
+      </div>
+    </div>
+  </div>
+</div>
