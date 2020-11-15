@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title> </title>
+    <title>VISUAL STUDIO TEMPLATE </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content=" ">
+    <meta name="title" content="VISUAL STUDIO TEMPLATE ">
     <meta name="generator" content="docfx 2.56.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -67,11 +67,41 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
+<h3 id="visual-studio-template">VISUAL STUDIO TEMPLATE</h3>
 
-<p><strong>Server Node Architecture Diagram</strong>
-<img src="../images/server_diagram.jpg" alt="image">
-<strong>Client Node Architecture Diagram</strong>
-<img src="../images/client_diagram.jpg" alt="image"></p>
+<p>Download template &amp; dlls from <a href="https://github.com/Ahmed310/FigNetCore/releases/tag/beta">THIS</a> link.
+Place the template as-is in “C:\Users\UserName\Documents\Visual Studio 2019\Templates\ProjectTemplates\Visual C#“
+It will appears as follow in project creation window
+<img src="../images/fignettemplate.png" alt="image"></p>
+<p>Add/Update following references</p>
+<ul>
+<li>FigNet.dll</li>
+<li>FigNetProviders</li>
+<li>FigNetServer</li>
+<li>FigNetClient [if application type is client]</li>
+</ul>
+<p>OR to create project from scratch
+CONSOLE BASED SERVER; create new .Netcore console application.</p>
+<h3 id="add-following-references">Add following references</h3>
+<ul>
+<li>FigNet.dll</li>
+<li>FigNetProviders</li>
+<li>FigNetServer</li>
+<li>FigNetClient [if application type is client]</li>
+</ul>
+<h3 id="add-following-nuget-packages">Add following NuGet Packages</h3>
+<ul>
+<li>ENet-CSharp</li>
+<li>LiteNetLib</li>
+<li>MessagePack</li>
+<li>Serilog</li>
+<li>Serilog.Sinks.Console</li>
+<li>Serilog.Sinks.File</li>
+<li>SimpleTCP.Core</li>
+<li>WebSocketSharp-netstandard</li>
+</ul>
+<p><img src="../images/template_structure.png" alt="image"></p>
+<p>Set the provider of your choice &amp; port number in ServerConfig.xml and run server</p>
 </article>
           </div>
           

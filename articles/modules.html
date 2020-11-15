@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title> </title>
+    <title>Modules </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content=" ">
+    <meta name="title" content="Modules ">
     <meta name="generator" content="docfx 2.56.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -67,11 +67,49 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
+<h1 id="modules">Modules</h1>
 
-<p><strong>Server Node Architecture Diagram</strong>
-<img src="../images/server_diagram.jpg" alt="image">
-<strong>Client Node Architecture Diagram</strong>
-<img src="../images/client_diagram.jpg" alt="image"></p>
+<p>A module is a small class that can be used to bundle up a set of related components behind a ‘facade’ to simplify configuration and deployment. In FigNet Modules implement FigNet.Core.IModule &amp; it is used to add your custom logic to fignet application in a modular way.</p>
+<pre><code class="lang-csharp">//IModule
+namespace FigNet.Core
+{
+    public interface IModule
+    {
+        void Load(IServer server);
+        void Process(float deltaTime);  // gets call per frame
+        void UnLoad();
+    }
+}
+</code></pre>
+<p><strong>How to create Module</strong></p>
+<pre><code class="lang-csharp">public class TestModule : IModule
+ {
+// here define your properties &amp; logic
+     public void Load(IServer server)
+      {
+          FN.Logger.Info(&quot;test loaded&quot;);
+          FN.HandlerCollection.RegisterHandler(new TestHandler());
+      }
+ 
+      public void Process(float deltaTime)
+      {
+      }
+ 
+      public void UnLoad()
+      {   
+      }
+}
+</code></pre>
+<p><strong>How to load a module</strong>
+Open ServerConfig.xml add Module tag and under that tag add assemblyName &amp; Type tags
+AssemblyName is the name of the dll or solution whereas Type name is the class name including namespace.
+<img src="../images/module.png" alt="image"></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Modules use reflection to create instances if you are using Unity IL2CPP load module manually instead of using config.</p>
+</div>
+<p><strong>How to mannually load the module</strong>
+<img src="../images/loadModule.png" alt="image"></p>
 </article>
           </div>
           
