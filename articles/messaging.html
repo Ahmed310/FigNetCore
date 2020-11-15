@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title> </title>
+    <title>Messaging </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content=" ">
+    <meta name="title" content="Messaging ">
     <meta name="generator" content="docfx 2.56.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -67,11 +67,59 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
+<h1 id="messaging">Messaging</h1>
 
-<p><strong>Server Node Architecture Diagram</strong>
-<img src="../images/server_diagram.jpg" alt="image">
-<strong>Client Node Architecture Diagram</strong>
-<img src="../images/client_diagram.jpg" alt="image"></p>
+<p>Network Messaging system in FigNet is based on Request &amp; Response paradigm.
+A network request object is called <strong>Operation</strong> and a Network response object is
+called <strong>Handler</strong>. A Application node can send Operations to Server node and vice versa.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Server to Server and Client to Server Communication has same syntax.</p>
+</div>
+<p><strong>How to create an Operation</strong></p>
+<pre><code class="lang-csharp">using FigNetProviders;
+using System.Collections.Generic;
+ 
+namespace DemoClient.Messages.Operations
+{
+    class EchoOperation
+    {
+        const ushort OP_CODE = 1;
+        public static Operation GetOperation(string msg)
+        {
+            Dictionary&lt;byte, object&gt; parameters = new Dictionary&lt;byte, object&gt;
+            {
+                { 0, msg }
+            };
+            Operation op = new Operation(OP_CODE, parameters, null);
+            return op;
+        }
+    }
+}
+
+</code></pre>
+<p><strong>How to create an Handler</strong></p>
+<pre><code class="lang-csharp">using FigNet.Core;
+ 
+namespace DemoServer.Messages.Handlers
+{
+    class EchoMessageHandler : IHandler
+    {
+        public ushort OpCode = 1;
+        public void HandleMessage(IMessage message, uint PeerId)
+        {
+            // echo back message to sender
+            var sender = FN.PeerCollection.GetPeerByID(PeerId);
+            message.Parameters.Add(1, PeerId); // append sender id at the end
+            FN.Server.SendMessage(sender, message, DeliveryMethod.Reliable, 0);
+         }
+    }
+}
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>FN.HandlerCollection.RegisterHandler(new EchoMessageHandler()); // <strong>Register Handler</strong></p>
+</div>
 </article>
           </div>
           

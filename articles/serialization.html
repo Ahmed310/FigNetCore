@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title> </title>
+    <title>Serializer </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content=" ">
+    <meta name="title" content="Serializer ">
     <meta name="generator" content="docfx 2.56.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -67,11 +67,35 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
+<h1 id="serializer">Serializer</h1>
 
-<p><strong>Server Node Architecture Diagram</strong>
-<img src="../images/server_diagram.jpg" alt="image">
-<strong>Client Node Architecture Diagram</strong>
-<img src="../images/client_diagram.jpg" alt="image"></p>
+<p>FigNet Supports MessagePack as default serializer. For other implement e.g. ProtoBuf, FlatBuffer or Serializer of your choice provide Implement ISerializer Interface and provide your Implementation and Set FN.Serializer to your Implementation.</p>
+<pre><code class="lang-csharp">namespace FigNet.Core
+{
+    public interface ISerializer
+    {
+        byte[] Serialize(T value);
+        T Deserialize(byte[] buffer);
+    }
+}
+</code></pre>
+<p><strong>How to Serialize an object</strong></p>
+<pre><code class="lang-csharp">public void SendMessageToAll(IMessage message, DeliveryMethod mode, byte channelId)
+{
+    byte[] data = FN.Serializer.Serialize((Operation)message);
+    server.SendToAll(data, channelId, GetDeliveryMode(mode));
+}
+</code></pre>
+<p><strong>How to Deserialize an object</strong></p>
+<pre><code class="lang-csharp">private void Receive(Event netEvent)
+{
+    byte[] buffer = new byte[netEvent.Packet.Length];
+    netEvent.Packet.CopyTo(buffer);
+ 
+    Operation operation = FN.Serializer.Deserialize(buffer);
+    FN.HandlerCollection.HandleMessage(operation, netEvent.Peer.ID);
+}
+</code></pre>
 </article>
           </div>
           

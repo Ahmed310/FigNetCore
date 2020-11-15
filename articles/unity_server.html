@@ -68,10 +68,23 @@
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
 
-<p><strong>Server Node Architecture Diagram</strong>
-<img src="../images/server_diagram.jpg" alt="image">
-<strong>Client Node Architecture Diagram</strong>
-<img src="../images/client_diagram.jpg" alt="image"></p>
+<p><strong>Unity Embedded Server!</strong></p>
+<p><img src="../images/unity_folder.png" alt="image"></p>
+<p>Import FigNetCore.package in your project.
+Go to Player Settings and set Api Compatibility Level to <strong>NET 4.x.</strong></p>
+<p>Open <strong>FigNetSampleScene</strong> &amp; press play button.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<ul>
+<li><strong>ServerManager.cs:</strong> starts a IServerSocket instance based on ServerConfig.xml file</li>
+<li><strong>ClientManager.cs:</strong> starts a IClientSocket instances based on ServerConfig_Client.xml</li>
+<li><strong>Bootstrap.cs:</strong> register EchoHandler</li>
+</ul>
+</div>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>When you have Unity embedded server, use different OpCode for Server &amp; Client Handlers. As FN.HandlerCollection is shared between Server &amp; Client handlers. to keep overall the complexity.</p>
+</div>
 </article>
           </div>
           
