@@ -70,6 +70,14 @@
 <h1 id="netstatistics">NetStatistics</h1>
 
 <p>IServerSocket &amp; IClientSocket has a property of NetStatistics which provides following statistics</p>
+<pre><code class="lang-csharp">public interface INetStatistics
+{
+    public ulong PacketsSent { get; }
+    public ulong PacketsReceived { get; }
+    public ulong BytesSent { get; }
+    public ulong BytesReceived { get; }
+}
+</code></pre>
 <div class="NOTE">
 <h5>Note</h5>
 <p>In Websockets &amp; TCP statics capture bytes sent &amp; received via Send function, heartbeat bytes are not captured.</p>

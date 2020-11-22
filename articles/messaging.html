@@ -120,6 +120,23 @@ namespace DemoServer.Messages.Handlers
 <h5>Note</h5>
 <p>FN.HandlerCollection.RegisterHandler(new EchoMessageHandler()); // <strong>Register Handler</strong></p>
 </div>
+<h2 id="inline-messages">Inline Messages</h2>
+<p>Inline message gets response in callback, you don't need seprate Handler for them.</p>
+<pre><code class="lang-csharp">    public interface INetworkRequest
+    {
+        void SendMessage(IMessage message, Action&lt;IMessage&gt; response, byte channelId = 0);
+    }
+</code></pre>
+<p><strong>Usage</strong></p>
+<pre><code class="lang-csharp">    FN.Connections[0].SendMessage(EchoOperation.GetOperation(&quot;Ping&quot;), (response) =&gt; { 
+                
+        // here handler response
+    });
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Inline messages are designed to handle one to one communication. e.g. a client asking for active games list &amp; getting result in a callback</p>
+</div>
 </article>
           </div>
           

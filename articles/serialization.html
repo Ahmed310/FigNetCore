@@ -96,6 +96,21 @@
     FN.HandlerCollection.HandleMessage(operation, netEvent.Peer.ID);
 }
 </code></pre>
+<h2 id="messagepack-settings">MessagePack Settings</h2>
+<pre><code class="lang-csharp">var resolver = MessagePack.Resolvers.CompositeResolver.Create(
+   MessagePack.Resolvers.GeneratedResolver.Instance,
+   MessagePack.Resolvers.ContractlessStandardResolver.Instance,
+   MessagePack.Resolvers.BuiltinResolver.Instance,
+   MessagePack.Resolvers.PrimitiveObjectResolver.Instance
+   );
+
+
+Options = MessagePackSerializerOptions.Standard.WithResolver(resolver);
+Options = Options.WithCompression(MessagePackCompression.Lz4BlockArray);
+
+
+MessagePackSerializer.DefaultOptions = Options;
+</code></pre>
 </article>
           </div>
           

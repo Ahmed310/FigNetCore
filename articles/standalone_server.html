@@ -80,8 +80,13 @@ It will appears as follow in project creation window
 <li>FigNetServer</li>
 <li>FigNetClient [if application type is client]</li>
 </ul>
-<p>OR to create project from scratch
-CONSOLE BASED SERVER; create new .Netcore console application.</p>
+<p><img src="../images/template_structure.png" alt="image"></p>
+<p><strong>Set the provider of your choice &amp; port number in ServerConfig.xml &amp; run the project</strong></p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If you are using other IDE you can create project from scratch</p>
+</div>
+<p>CONSOLE BASED SERVER; create new .Netcore console application.</p>
 <h3 id="add-following-references">Add following references</h3>
 <ul>
 <li>FigNet.dll</li>
@@ -100,8 +105,46 @@ CONSOLE BASED SERVER; create new .Netcore console application.</p>
 <li>SimpleTCP.Core</li>
 <li>WebSocketSharp-netstandard</li>
 </ul>
-<p><img src="../images/template_structure.png" alt="image"></p>
-<p>Set the provider of your choice &amp; port number in ServerConfig.xml and run server</p>
+<p><strong>How to start a server</strong>
+Define ServerConfig tag in Configuration file</p>
+<pre><code class="lang-xml">&lt;ServerConfig&gt;
+    &lt;Name&gt;ServerNameHere&lt;/Name&gt;
+    &lt;Port&gt;5555&lt;/Port&gt;
+    &lt;Provider&gt;ENet&lt;/Provider&gt;
+&lt;/ServerConfig&gt;
+</code></pre>
+<p>And set ApplicationType value to Server, It will Start IServerSocket that you can access via <strong>FN.Server</strong> property</p>
+<pre><code class="lang-xml">&lt;Configuration
+  &lt;ApplicationType&gt;Server&lt;/ApplicationType&gt;
+  &lt;FrameRate&gt;33&lt;/FrameRate&gt;
+  &lt;EnableFileLogs&gt;true&lt;/EnableFileLogs&gt;
+</code></pre>
+<p><strong>How to start a Client</strong>
+Define PeerConfig tag under PeerConfigs in Configuration file</p>
+<pre><code class="lang-xml"> &lt;PeerConfigs&gt;
+    &lt;PeerConfig&gt;
+      &lt;Name&gt;DefaultClient&lt;/Name&gt;
+      &lt;Port&gt;5555&lt;/Port&gt;
+      &lt;PeerIp&gt;127.0.0.1&lt;/PeerIp&gt;
+      &lt;Provider&gt;ENet&lt;/Provider&gt;
+      &lt;AutoConnect&gt;true&lt;/AutoConnect&gt;
+    &lt;/PeerConfig&gt;
+  &lt;/PeerConfigs&gt;
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<ul>
+<li>If AutoConnect is set to false then you have to manually start the client socket.</li>
+<li>query PeerConfig from configuration: <strong>var peerConfig = Settings.PeerConfigs.Find(config=&gt;config.Name == &quot;DefaultClient&quot;);</strong></li>
+<li>and call this function <strong>FN.AddConnectionAndConnect(peerConfig);</strong></li>
+</ul>
+</div>
+<p>And set ApplicationType value to Client, It will Start IClientSocket that you can access via <strong>FN.Connections[0]</strong> property</p>
+<pre><code class="lang-xml">&lt;Configuration
+  &lt;ApplicationType&gt;Client&lt;/ApplicationType&gt;
+  &lt;FrameRate&gt;60&lt;/FrameRate&gt;
+  &lt;EnableFileLogs&gt;false&lt;/EnableFileLogs&gt;
+</code></pre>
 </article>
           </div>
           

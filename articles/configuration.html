@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Configuration containing all possible tags! </title>
+    <title>FigNet Application Tag </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Configuration containing all possible tags! ">
+    <meta name="title" content="FigNet Application Tag ">
     <meta name="generator" content="docfx 2.56.5.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -67,56 +67,54 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="configuration-containing-all-possible-tags">Configuration containing all possible tags!</h1>
+<h2 id="fignet-application-tag">FigNet Application Tag</h2>
 
 <pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;
 &lt;Configuration
-	xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;
-	xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
-  &lt;ApplicationType&gt;Server&lt;/ApplicationType&gt;
-  &lt;FrameRate&gt;33&lt;/FrameRate&gt;
-  &lt;EnableFileLogs xsi:nil=&quot;true&quot; /&gt; &lt;!-- optional, if don't want to use it remove this line else use  &lt;EnableFileLogs&gt; true &lt;EnableFileLogs&gt; --&gt;
-  &lt;MTU xsi:nil=&quot;true&quot; /&gt;
-  &lt;MaxInBound xsi:nil=&quot;true&quot; /&gt;
-  &lt;MaxOutBound xsi:nil=&quot;true&quot; /&gt;
-  &lt;ServerConfig&gt;
+  &lt;ApplicationType&gt;Server&lt;/ApplicationType&gt;		&lt;!-- Server|Client --&gt;
+  &lt;FrameRate&gt;33&lt;/FrameRate&gt;         &lt;!-- Application tick rate per second --&gt;
+  &lt;EnableFileLogs xsi:nil=&quot;true&quot; /&gt; &lt;!-- optional --&gt;
+  &lt;MTU xsi:nil=&quot;true&quot; /&gt;            &lt;!-- optional , you can remove that tag --&gt;
+  &lt;MaxInBound xsi:nil=&quot;true&quot; /&gt;     &lt;!-- optional --&gt;
+  &lt;MaxOutBound xsi:nil=&quot;true&quot; /&gt;    &lt;!-- optional --&gt;
+&lt;/Configuration&gt;
+</code></pre>
+<h2 id="serverconfig-tag">ServerConfig Tag</h2>
+<p>Used to create IServerSocket</p>
+<pre><code class="lang-xml">&lt;ServerConfig&gt;
     &lt;Name&gt;DefaultServer&lt;/Name&gt;
     &lt;Port&gt;5555&lt;/Port&gt;
+    &lt;Provider&gt;ENet&lt;/Provider&gt;                  &lt;!-- ENet|LiteNetLib|TCP|WebSockets --&gt;
+    &lt;MaxChannels xsi:nil=&quot;true&quot; /&gt;             &lt;!-- optional, can be removed if unused --&gt;
+    &lt;MaxConnections xsi:nil=&quot;true&quot; /&gt;          &lt;!-- optional, can be removed if unused --&gt;
+&lt;/ServerConfig&gt;
+</code></pre>
+<h2 id="modules-tag">Modules Tag</h2>
+<p>Add under ServerConfig Tag</p>
+<pre><code class="lang-xml">&lt;Modules&gt;                                     
+    &lt;Module&gt;
+      &lt;AssemblyName&gt;FigNetCore&lt;/AssemblyName&gt;  &lt;!-- AssemblyName --&gt;
+      &lt;Type&gt;FigNetCore.Rooms.Room&lt;/Type&gt;       &lt;!-- Class name with NameSpace --&gt;
+    &lt;/Module&gt;
+    &lt;Module&gt;
+      &lt;AssemblyName&gt;AwesomeGame&lt;/AssemblyName&gt;
+      &lt;Type&gt;AwesomeGame.GameState&lt;/Type&gt;
+    &lt;/Module&gt;
+&lt;/Modules&gt;
+</code></pre>
+<h2 id="peerconfigs-tag">PeerConfigs Tag</h2>
+<p>Used to create IClientSocket, you can define multiple PeerConnections</p>
+<pre><code class="lang-xml">&lt;PeerConfigs&gt;
+  &lt;PeerConfig&gt;
+    &lt;Name&gt;DefaultClient&lt;/Name&gt;   
+    &lt;Port&gt;5555&lt;/Port&gt;
+    &lt;PeerIp&gt;127.0.0.1&lt;/PeerIp&gt;
     &lt;Provider&gt;ENet&lt;/Provider&gt;
+    &lt;AutoConnect&gt;true&lt;/AutoConnect&gt;
     &lt;MaxChannels xsi:nil=&quot;true&quot; /&gt;
-    &lt;MaxConnections xsi:nil=&quot;true&quot; /&gt;
-    &lt;Modules&gt;
-      &lt;Module&gt;
-        &lt;AssemblyName&gt;FigNetCore&lt;/AssemblyName&gt;
-        &lt;Type&gt;FigNetCore.Rooms.Room&lt;/Type&gt;
-      &lt;/Module&gt;
-      &lt;Module&gt;
-        &lt;AssemblyName&gt;AwesomeGame&lt;/AssemblyName&gt;
-        &lt;Type&gt;AwesomeGame.GameState&lt;/Type&gt;
-      &lt;/Module&gt;
-    &lt;/Modules&gt;
-  &lt;/ServerConfig&gt;
-  &lt;PeerConfigs&gt;
-    &lt;PeerConfig&gt;
-      &lt;Name&gt;DefaultClient&lt;/Name&gt;
-      &lt;Port&gt;5555&lt;/Port&gt;
-      &lt;PeerIp&gt;127.0.0.1&lt;/PeerIp&gt;
-      &lt;Provider&gt;ENet&lt;/Provider&gt;
-      &lt;AutoConnect xsi:nil=&quot;true&quot; /&gt;
-      &lt;MaxChannels xsi:nil=&quot;true&quot; /&gt;
-      &lt;MaxReconnectTries xsi:nil=&quot;true&quot; /&gt;
-    &lt;/PeerConfig&gt;
-    &lt;PeerConfig&gt;
-      &lt;Name&gt;WebServer&lt;/Name&gt;
-      &lt;Port&gt;9999&lt;/Port&gt;
-      &lt;PeerIp&gt;localhost&lt;/PeerIp&gt;
-      &lt;Provider&gt;WebSockets&lt;/Provider&gt;
-      &lt;AutoConnect xsi:nil=&quot;true&quot; /&gt;
-      &lt;MaxChannels xsi:nil=&quot;true&quot; /&gt;
-      &lt;MaxReconnectTries xsi:nil=&quot;true&quot; /&gt;
-    &lt;/PeerConfig&gt;
-  &lt;/PeerConfigs&gt;
-&lt;/Configuration&gt;
+    &lt;MaxReconnectTries xsi:nil=&quot;true&quot; /&gt;
+  &lt;/PeerConfig&gt;
+&lt;/PeerConfigs&gt;
 </code></pre>
 </article>
           </div>

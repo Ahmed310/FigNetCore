@@ -2687,11 +2687,11 @@ references:
   commentId: T:FigNetProviders.ENetLib.PeerENet
   fullName: FigNetProviders.ENetLib.PeerENet
   nameWithType: PeerENet
-- uid: FigNetProviders.ENetLib.PeerENet.#ctor(ENet.Peer)
+- uid: FigNetProviders.ENetLib.PeerENet.#ctor(Peer)
   name: PeerENet(Peer)
-  href: api/FigNetProviders.ENetLib.PeerENet.html#FigNetProviders_ENetLib_PeerENet__ctor_ENet_Peer_
-  commentId: M:FigNetProviders.ENetLib.PeerENet.#ctor(ENet.Peer)
-  fullName: FigNetProviders.ENetLib.PeerENet.PeerENet(ENet.Peer)
+  href: api/FigNetProviders.ENetLib.PeerENet.html#FigNetProviders_ENetLib_PeerENet__ctor_Peer_
+  commentId: M:FigNetProviders.ENetLib.PeerENet.#ctor(Peer)
+  fullName: FigNetProviders.ENetLib.PeerENet.PeerENet(Peer)
   nameWithType: PeerENet.PeerENet(Peer)
 - uid: FigNetProviders.ENetLib.PeerENet.#ctor*
   name: PeerENet
@@ -3219,11 +3219,11 @@ references:
   commentId: T:FigNetProviders.LiteNetLib.PeerLiteNetLib
   fullName: FigNetProviders.LiteNetLib.PeerLiteNetLib
   nameWithType: PeerLiteNetLib
-- uid: FigNetProviders.LiteNetLib.PeerLiteNetLib.#ctor(LiteNetLib.NetPeer)
+- uid: FigNetProviders.LiteNetLib.PeerLiteNetLib.#ctor(NetPeer)
   name: PeerLiteNetLib(NetPeer)
-  href: api/FigNetProviders.LiteNetLib.PeerLiteNetLib.html#FigNetProviders_LiteNetLib_PeerLiteNetLib__ctor_LiteNetLib_NetPeer_
-  commentId: M:FigNetProviders.LiteNetLib.PeerLiteNetLib.#ctor(LiteNetLib.NetPeer)
-  fullName: FigNetProviders.LiteNetLib.PeerLiteNetLib.PeerLiteNetLib(LiteNetLib.NetPeer)
+  href: api/FigNetProviders.LiteNetLib.PeerLiteNetLib.html#FigNetProviders_LiteNetLib_PeerLiteNetLib__ctor_NetPeer_
+  commentId: M:FigNetProviders.LiteNetLib.PeerLiteNetLib.#ctor(NetPeer)
+  fullName: FigNetProviders.LiteNetLib.PeerLiteNetLib.PeerLiteNetLib(NetPeer)
   nameWithType: PeerLiteNetLib.PeerLiteNetLib(NetPeer)
 - uid: FigNetProviders.LiteNetLib.PeerLiteNetLib.#ctor*
   name: PeerLiteNetLib
@@ -4857,11 +4857,11 @@ references:
   commentId: T:FigNetProviders.WebSocket.ServerSocketWS.SessionWS
   fullName: FigNetProviders.WebSocket.ServerSocketWS.SessionWS
   nameWithType: ServerSocketWS.SessionWS
-- uid: FigNetProviders.WebSocket.ServerSocketWS.SessionWS.#ctor(WebSocketSharp.Server.IWebSocketSession)
+- uid: FigNetProviders.WebSocket.ServerSocketWS.SessionWS.#ctor(IWebSocketSession)
   name: SessionWS(IWebSocketSession)
-  href: api/FigNetProviders.WebSocket.ServerSocketWS.SessionWS.html#FigNetProviders_WebSocket_ServerSocketWS_SessionWS__ctor_WebSocketSharp_Server_IWebSocketSession_
-  commentId: M:FigNetProviders.WebSocket.ServerSocketWS.SessionWS.#ctor(WebSocketSharp.Server.IWebSocketSession)
-  fullName: FigNetProviders.WebSocket.ServerSocketWS.SessionWS.SessionWS(WebSocketSharp.Server.IWebSocketSession)
+  href: api/FigNetProviders.WebSocket.ServerSocketWS.SessionWS.html#FigNetProviders_WebSocket_ServerSocketWS_SessionWS__ctor_IWebSocketSession_
+  commentId: M:FigNetProviders.WebSocket.ServerSocketWS.SessionWS.#ctor(IWebSocketSession)
+  fullName: FigNetProviders.WebSocket.ServerSocketWS.SessionWS.SessionWS(IWebSocketSession)
   nameWithType: ServerSocketWS.SessionWS.SessionWS(IWebSocketSession)
 - uid: FigNetProviders.WebSocket.ServerSocketWS.SessionWS.#ctor*
   name: SessionWS
@@ -5105,13 +5105,13 @@ references:
   commentId: T:MessagePack.Formatters.FigNetProviders.OperationFormatter
   fullName: MessagePack.Formatters.FigNetProviders.OperationFormatter
   nameWithType: OperationFormatter
-- uid: MessagePack.Formatters.FigNetProviders.OperationFormatter.Deserialize(MessagePack.MessagePackReader@,MessagePack.MessagePackSerializerOptions)
+- uid: MessagePack.Formatters.FigNetProviders.OperationFormatter.Deserialize(MessagePackReader@,MessagePack.MessagePackSerializerOptions)
   name: Deserialize(ref MessagePackReader, MessagePackSerializerOptions)
-  href: api/MessagePack.Formatters.FigNetProviders.OperationFormatter.html#MessagePack_Formatters_FigNetProviders_OperationFormatter_Deserialize_MessagePack_MessagePackReader__MessagePack_MessagePackSerializerOptions_
-  commentId: M:MessagePack.Formatters.FigNetProviders.OperationFormatter.Deserialize(MessagePack.MessagePackReader@,MessagePack.MessagePackSerializerOptions)
+  href: api/MessagePack.Formatters.FigNetProviders.OperationFormatter.html#MessagePack_Formatters_FigNetProviders_OperationFormatter_Deserialize_MessagePackReader__MessagePack_MessagePackSerializerOptions_
+  commentId: M:MessagePack.Formatters.FigNetProviders.OperationFormatter.Deserialize(MessagePackReader@,MessagePack.MessagePackSerializerOptions)
   name.vb: Deserialize(ByRef MessagePackReader, MessagePackSerializerOptions)
-  fullName: MessagePack.Formatters.FigNetProviders.OperationFormatter.Deserialize(ref MessagePack.MessagePackReader, MessagePack.MessagePackSerializerOptions)
-  fullName.vb: MessagePack.Formatters.FigNetProviders.OperationFormatter.Deserialize(ByRef MessagePack.MessagePackReader, MessagePack.MessagePackSerializerOptions)
+  fullName: MessagePack.Formatters.FigNetProviders.OperationFormatter.Deserialize(ref MessagePackReader, MessagePack.MessagePackSerializerOptions)
+  fullName.vb: MessagePack.Formatters.FigNetProviders.OperationFormatter.Deserialize(ByRef MessagePackReader, MessagePack.MessagePackSerializerOptions)
   nameWithType: OperationFormatter.Deserialize(ref MessagePackReader, MessagePackSerializerOptions)
   nameWithType.vb: OperationFormatter.Deserialize(ByRef MessagePackReader, MessagePackSerializerOptions)
 - uid: MessagePack.Formatters.FigNetProviders.OperationFormatter.Deserialize*
@@ -5121,13 +5121,13 @@ references:
   isSpec: "True"
   fullName: MessagePack.Formatters.FigNetProviders.OperationFormatter.Deserialize
   nameWithType: OperationFormatter.Deserialize
-- uid: MessagePack.Formatters.FigNetProviders.OperationFormatter.Serialize(MessagePack.MessagePackWriter@,FigNetProviders.Operation,MessagePack.MessagePackSerializerOptions)
+- uid: MessagePack.Formatters.FigNetProviders.OperationFormatter.Serialize(MessagePackWriter@,FigNetProviders.Operation,MessagePack.MessagePackSerializerOptions)
   name: Serialize(ref MessagePackWriter, Operation, MessagePackSerializerOptions)
-  href: api/MessagePack.Formatters.FigNetProviders.OperationFormatter.html#MessagePack_Formatters_FigNetProviders_OperationFormatter_Serialize_MessagePack_MessagePackWriter__FigNetProviders_Operation_MessagePack_MessagePackSerializerOptions_
-  commentId: M:MessagePack.Formatters.FigNetProviders.OperationFormatter.Serialize(MessagePack.MessagePackWriter@,FigNetProviders.Operation,MessagePack.MessagePackSerializerOptions)
+  href: api/MessagePack.Formatters.FigNetProviders.OperationFormatter.html#MessagePack_Formatters_FigNetProviders_OperationFormatter_Serialize_MessagePackWriter__FigNetProviders_Operation_MessagePack_MessagePackSerializerOptions_
+  commentId: M:MessagePack.Formatters.FigNetProviders.OperationFormatter.Serialize(MessagePackWriter@,FigNetProviders.Operation,MessagePack.MessagePackSerializerOptions)
   name.vb: Serialize(ByRef MessagePackWriter, Operation, MessagePackSerializerOptions)
-  fullName: MessagePack.Formatters.FigNetProviders.OperationFormatter.Serialize(ref MessagePack.MessagePackWriter, FigNetProviders.Operation, MessagePack.MessagePackSerializerOptions)
-  fullName.vb: MessagePack.Formatters.FigNetProviders.OperationFormatter.Serialize(ByRef MessagePack.MessagePackWriter, FigNetProviders.Operation, MessagePack.MessagePackSerializerOptions)
+  fullName: MessagePack.Formatters.FigNetProviders.OperationFormatter.Serialize(ref MessagePackWriter, FigNetProviders.Operation, MessagePack.MessagePackSerializerOptions)
+  fullName.vb: MessagePack.Formatters.FigNetProviders.OperationFormatter.Serialize(ByRef MessagePackWriter, FigNetProviders.Operation, MessagePack.MessagePackSerializerOptions)
   nameWithType: OperationFormatter.Serialize(ref MessagePackWriter, Operation, MessagePackSerializerOptions)
   nameWithType.vb: OperationFormatter.Serialize(ByRef MessagePackWriter, Operation, MessagePackSerializerOptions)
 - uid: MessagePack.Formatters.FigNetProviders.OperationFormatter.Serialize*
